@@ -12,10 +12,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             height: 100vh;
             margin: 0;
         }
         .container {
+        	margin-top: 50px;
             text-align: center;
         }
         h1 {
@@ -50,8 +52,51 @@
         }
         footer {
             display: flex;
-            position: absolute;
-            bottom: 20px;
+            position: relative;
+   			margin-bottom: 100px;
+        }
+        
+       .products {
+       		margin-block: 30px;
+       		display: flex;
+       		Justify-content: space-beetwen;
+       }
+        
+        .product-card {
+        	color: #000;
+        	text-decoration: none;
+        	padding: 5px;
+            background-color: white;
+            border: none;
+            border-radius: 20px;
+            width: 100px; /* Ширина кнопки */
+            Margin: 20px 5px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+            overflow: hidden;
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+        .product-image {
+        	border-radius: 15px;
+            width: 100%; /* Ширина изображения */
+            height: auto;
+            border: 20px;
+        }
+        .product-name {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .product-price {
+            font-size: 16px;
+            color: green;
+        }
+        .product-old-price {
+            font-size: 14px;
+            color: red;
+            text-decoration: line-through; /* Зачёркнутая цена */
         }
     </style>
 </head>
@@ -64,8 +109,34 @@
         <a href="https://vk.com/qadesign" class="button">
             <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/VK_Compact_Logo_%282021-present%29.svg" alt="VK" class="logo">VK сообщесво</a>
     </div>
+   <div class="container">
+   		<h1>УСЛУГИ</h1>
+	    <div class="products">
+			<a class="product-card" href="https://vk.com/market/product/avatarka-208047320-6975382">
+		        <img src="https://i.imgur.com/8L7Veml.png" class="product-image">
+		        <div class="product-name">АВАТАРКА</div>
+		        <div class="product-old-price">50₽</div>
+		        <div class="product-price">100₽</div>
+		    </a>
+		
+		    <a class="product-card" href="https://vk.com/market/product/prevyu-208047320-6975400">
+		        <img src="https://i.imgur.com/eZsZoxh.png" class="product-image">
+		        <div class="product-name">ПРЕВЬЮ</div>
+		        <div class="product-old-price">100₽</div>
+		        <div class="product-price">150₽</div>
+		    </a>
+		
+		    <a class="product-card" href="https://vk.com/market/product/banner-208047320-6975408">
+		        <img src="https://i.imgur.com/14aYU0p.png" class="product-image">
+		        <div class="product-name">БАННЕР</div>
+		        <div class="product-old-price">150₽</div>
+		        <div class="product-price">200₽</div>
+		    </a>
+	    </div>
+    </div>
     <footer>
-        © QA Design
+    	<a href="terms.html"><span style="color: red">*</span>Условия использования</a>
+         © QA Design
     </footer>
 </body>
 </html>
